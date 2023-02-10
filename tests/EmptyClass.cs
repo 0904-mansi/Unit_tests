@@ -5,29 +5,31 @@ namespace Demo.tests
 	{
 		public static void EmptyClasst()
 		{
-			try {
-                int num = 2;
+		try {
+			//Arrange
+			int num = 2;
 
-                EmptyClass1 obj = new EmptyClass1();
+			EmptyClass1 obj = new EmptyClass1();
+			//Act
+			string res = obj.EmptyClass(num);
+			
+			//Assert
+			if (res == "skku")
+			{
+			    Console.WriteLine("Pass");
+			}
+			else
+			{
+			    Console.WriteLine("fail");
+			}
+                  }
 
-                string res = obj.EmptyClass(num);
-
-                if (res == "skku")
-                {
-                    Console.WriteLine("Pass");
-                }
-                else
-                {
-                    Console.WriteLine("fail");
-                }
-            }
-
-
-            catch (Exception e)
-            {
-                Console.WriteLine(e);
-            }
-        }
+		 //exception
+		    catch (Exception e)
+		    {
+			Console.WriteLine(e);
+		    }
+      	      }
 	}
 }
 
